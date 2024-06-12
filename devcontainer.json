@@ -1,0 +1,13 @@
+{
+    "name": "My Project Container",
+    "dockerFile": "../Dockerfile",
+    "runArgs": ["--rm", "-it", "-p", "4000:80"],
+    "extensions": [
+        "ms-python.python",
+        "ms-azuretools.vscode-docker"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "pip install -r requirements_docker.txt"
+}
