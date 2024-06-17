@@ -1,5 +1,4 @@
 import praw
-import config
 from transformers import pipeline
 # from openai import OpenAI
 import settings
