@@ -7,13 +7,13 @@ class TwitterScraper:
             self.login()
 
     def login(self):
-        consumer_key = settings.TWITTER_API_KEY
-        consumer_secret = settings.TWITTER_API_KEY_SECRET
+        api_key = settings.TWITTER_API_KEY
+        api_secret = settings.TWITTER_API_KEY_SECRET
         access_token = settings.TWITTER_ACCESS_KEY
         access_token_secret = settings.TWITTER_ACCESS_KEY_SECRET
         auth = t.OAuth1UserHandler(
-             consumer_key, 
-             consumer_secret, 
+             api_key, 
+             api_secret, 
              access_token, 
              access_token_secret
              )
