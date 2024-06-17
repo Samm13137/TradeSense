@@ -1,19 +1,19 @@
 import praw
 import config
 from transformers import pipeline
-from openai import OpenAI
-
+# from openai import OpenAI
+import settings
 
 
 
 
 
 reddit = praw.Reddit(
-    client_id = config.REDDIT_ID,
-    client_secret = config.REDDIT_SECRET,
-    password = config.REDDIT_PASS,
+    client_id = settings.REDDIT_ID,
+    client_secret = settings.REDDIT_SECRET,
+    password = settings.REDDIT_PASS,
     user_agent = "USERAGENT",
-    username = config.REDDIT_USER,
+    username = settings.REDDIT_USER,
 )
 
 # print (reddit)

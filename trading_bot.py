@@ -1,1 +1,1 @@
-print("I would love some crack")
+print("I would love some SWE Internships")
