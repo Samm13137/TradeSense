@@ -1,7 +1,7 @@
 import praw
 from transformers import pipeline
 # from openai import OpenAI
-import settings
+import bot.settings as settings
 
 
 
