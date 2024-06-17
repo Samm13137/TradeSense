@@ -1,8 +1,6 @@
 import praw
 from transformers import pipeline
-# from openai import OpenAI
 import bot.settings as settings
-
 
 
 
@@ -27,26 +25,6 @@ def max_character(text):      #this function is to help with like super super lo
     if len(text) > max_length:
         text = text[:max_length]
     return senti(text)
-
-
-
-
-# client = OpenAI(api_key=config.OPENAI_API_KEY)
-
-# def max_character(text):
-#     try:
-#         response = client.chat.completions.create(
-#             model="gpt-3.5-turbo",
-#             messages=[
-#                 {"role": "system", "content": "You are a sentiment analysis assistant."},
-#                 {"role": "user", "content": f"Analyze the sentiment of the following text and return whether it is positive, negative, or neutral: {text}"}
-#             ]
-#         )
-#         sentiment = response.choices[0].message['content'].strip()
-#         return sentiment
-#     except Exception as e:
-#         return f"Error: {e}"
-    
 
 
     

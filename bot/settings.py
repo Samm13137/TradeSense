@@ -14,5 +14,3 @@ REDDIT_SECRET = os.getenv('REDDIT_SECRET')
 REDDIT_USER = os.getenv('REDDIT_USER')
 
 REDDIT_PASS = os.getenv('REDDIT_PASS')
-
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
