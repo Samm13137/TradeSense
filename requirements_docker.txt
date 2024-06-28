@@ -6,6 +6,7 @@ transformers
 torch
 twikit
 bs4
+alpaca-py
 
 // openai
 
