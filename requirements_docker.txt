@@ -4,6 +4,7 @@ requests
 praw
 transformers 
 torch
+twikit
 
 
 // openai
