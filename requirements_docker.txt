@@ -5,7 +5,7 @@ praw
 transformers 
 torch
 twikit
-
+bs4
 
 // openai
 
