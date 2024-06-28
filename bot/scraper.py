@@ -13,22 +13,22 @@ parsed_data = [] # an array of arrays with structure [Ticker | Date | Time | Tit
 
 def get_parsed_data(): # Scraps for parsed data
     for ticker in tickers:
-        url = finviz_url + ticker
+        url = finviz_url + ticker # finds URL to parse from
 
         req = Request(url=url, headers={'user-agent': 'tradesense'})
         response = urlopen(req)
 
-        html = BeautifulSoup(response, features="html.parser")
-        news_table = html.find(id='news-table')
+        html = BeautifulSoup(response, features="html.parser") # rips the HTML from response
+        news_table = html.find(id='news-table') # scraps the table of news articles from website
         news_tables[ticker] = news_table
 
         break
 
     for ticker, news_table in news_tables.items():
         for row in news_table.findAll('tr'):
-            if row.a:
-                title = row.a.text
-                date_data = row.td.text.strip().split(' ')
+            if row.a: # Avoids error with articles. Basically checks if a title exists
+                title = row.a.text # Scrapes title
+                date_data = row.td.text.strip().split(' ') # Scrapes date/time. Not all have a date but all have time
                 if len(date_data) == 1:
                     time = date_data[0]
                 else:
